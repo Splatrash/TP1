@@ -3,6 +3,7 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import random
+from demarrage import demarrageJeu
 
 banque_Mot = {
     "manette": "Appareil utilisé pour jouer à certains jeux vidéo.",
@@ -15,18 +16,10 @@ banque_Mot = {
 lettre_essaye = []
 
 
-def demarrageJeu():
-    mot = str(random.choice(list(banque_Mot.keys())))
-    print()
-    print("Bienvenue au bonhomme pendu!")
-    print("Essayer de deviner le mot en entrant une lettre à la fois!")
-    print("N.B: Ne pas mettre d'accent sur les lettre!")
-    print()
-
-    return mot
 
 
-mot = demarrageJeu()
+
+mot = demarrageJeu(banque_Mot)
 
 mot_vide = list("_" * int(len(mot)))
 for i in range(0, int(len(mot_vide))):
@@ -78,7 +71,6 @@ def tour(entree, mot, lettre_trouvee, lettre_essaye):
         return False
     else:
         print("Veuillez vous assurer d'entrer une lettre ou une méthode d'aide.")
-        print("N.B: N'oublier pas que les lettre n'ont pas d'accents.")
         return False
 
 
