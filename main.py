@@ -122,7 +122,7 @@ while any("_" in s for s in mot_vide) and etape != 7:
     if etape < 6:
         entree = str(input("Entrer une lettre ou demandez un indice: "))
         print()
-        erreur = tour(entree, mot, lettre_trouvee, lettre_essaye)
+        erreur = tour(entree, mot, lettre_trouvee, lettre_essaye, mot_vide)
         if erreur:
             etape += 1
         print("Lettre essayé: ", lettre_essaye)

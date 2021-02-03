@@ -1,4 +1,4 @@
-def tour(entree, mot, lettre_trouvee, lettre_essaye):
+def tour(entree, mot, lettre_trouvee, lettre_essaye, mot_vide):
     entree = entree.strip()
     if any(entree in s for s in lettre_essaye):
         print("Vous avez déja essayé la lettre: " + entree)
