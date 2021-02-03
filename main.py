@@ -5,6 +5,7 @@
 
 from demarrage import demarrageJeu
 from tours import tour
+from stages import stage
 
 banque_mots = {
     "manette": "Appareil utilisé pour jouer à certains jeux vidéo.",
@@ -25,97 +26,9 @@ print("")
 
 lettre_trouvee = 0
 
-
-def stage(stage):
-    if stage == 0:
-        print()
-        print("Pour avoir une lettre gratuite écrivez 'lettre'.")
-        print("Pour avoir la description du mot écrivez 'desc'.")
-        print()
-        print(" __________")
-        print(" |        |")
-        print(" |         ")
-        print(" |         ")
-        print(" |         ")
-        print(" |         ")
-        print(" |         ")
-        print("_|____________")
-        print("")
-    elif stage == 1:
-        print()
-        print("Pour avoir une lettre gratuite écrivez 'lettre'.")
-        print("Pour avoir la description du mot écrivez 'desc'.")
-        print()
-        print(" __________")
-        print(" |        |")
-        print(" |        o")
-        print(" |         ")
-        print(" |         ")
-        print(" |         ")
-        print(" |         ")
-        print("_|____________")
-        print()
-    elif stage == 2:
-        print()
-        print("Pour avoir une lettre gratuite écrivez 'lettre'.")
-        print("Pour avoir la description du mot écrivez 'desc'.")
-        print()
-        print(" __________")
-        print(" |        |")
-        print(" |        o")
-        print(" |        | ")
-        print(" |         ")
-        print(" |         ")
-        print(" |         ")
-        print("_|____________")
-        print()
-    elif stage == 3:
-        print()
-        print("Pour avoir une lettre gratuite écrivez 'lettre'.")
-        print("Pour avoir la description du mot écrivez 'desc'.")
-        print()
-        print(" __________")
-        print(" |        |")
-        print(" |        o")
-        print(" |       -| ")
-        print(" |         ")
-        print(" |         ")
-        print(" |         ")
-        print("_|____________")
-        print()
-    elif stage == 4:
-        print()
-        print("Pour avoir une lettre gratuite écrivez 'lettre'.")
-        print("Pour avoir la description du mot écrivez 'desc'.")
-        print()
-        print(" __________")
-        print(" |        |")
-        print(" |        o")
-        print(" |       -|- ")
-        print(" |         ")
-        print(" |         ")
-        print(" |         ")
-        print("_|____________")
-        print()
-    elif stage == 5:
-        print()
-        print("Pour avoir une lettre gratuite écrivez 'lettre'.")
-        print("Pour avoir la description du mot écrivez 'desc'.")
-        print()
-        print(" __________")
-        print(" |        |")
-        print(" |        o")
-        print(" |       -|- ")
-        print(" |       / ")
-        print(" |         ")
-        print(" |         ")
-        print("_|____________")
-        print()
-
-
-
 etape = 0
 gagner = True
+
 while any("_" in s for s in mot_vide) and etape != 7:
     stage(etape)
     print("")
