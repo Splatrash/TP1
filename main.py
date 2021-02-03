@@ -4,9 +4,9 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 from demarrage import demarrageJeu
-from tour import tour
+from tours import tour
 
-banque_Mot = {
+banque_mots = {
     "manette": "Appareil utilisé pour jouer à certains jeux vidéo.",
     "bouteille": "Conteneur conçue pour tenir un liquide.",
     "bureau": "Surface de travail.",
@@ -16,7 +16,7 @@ banque_Mot = {
 
 lettre_essaye = []
 
-mot = demarrageJeu(banque_Mot)
+mot = demarrageJeu(banque_mots)
 
 mot_vide = list("_" * int(len(mot)))
 for i in range(0, int(len(mot_vide))):
@@ -122,7 +122,7 @@ while any("_" in s for s in mot_vide) and etape != 7:
     if etape < 6:
         entree = str(input("Entrer une lettre ou demandez un indice: "))
         print()
-        erreur = tour(entree, mot, lettre_trouvee, lettre_essaye, mot_vide)
+        erreur = tour(entree, mot, lettre_trouvee, lettre_essaye, mot_vide, banque_mots)
         if erreur:
             etape += 1
         print("Lettre essayé: ", lettre_essaye)

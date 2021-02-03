@@ -1,4 +1,6 @@
-def tour(entree, mot, lettre_trouvee, lettre_essaye, mot_vide):
+import random
+
+def tour(entree, mot, lettre_trouvee, lettre_essaye, mot_vide, banque_mots):
     entree = entree.strip()
     if any(entree in s for s in lettre_essaye):
         print("Vous avez déja essayé la lettre: " + entree)
@@ -35,7 +37,7 @@ def tour(entree, mot, lettre_trouvee, lettre_essaye, mot_vide):
         return False
     elif entree == "desc":
         print()
-        print("Description: " + banque_Mot[mot])
+        print("Description: " + banque_mots[mot])
         print()
         return False
     else:
